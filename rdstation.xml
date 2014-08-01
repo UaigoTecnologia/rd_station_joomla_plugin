@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<extension version="3.3" client='administrator' type="plugin" group="k2" method="upgrade">
+	<name>System -Rd Station</name>
+	<author>Uaigo! Tecnologia</author>
+	<authorEmail>contato@uaigo.com.br</authorEmail>
+	<authorUrl>Uagio! Tecnologia</authorUrl>
+	<creationDate>Jul 2014</creationDate>
+	<copyright></copyright>
+	<version>0.0.0</version>
+	<license></license>
+	<description>PLG_SYSTEM_RD_STATION_DESCRIPTION</description>
+	<files>
+		<filename plugin="rdstation">rdstation.php</filename>
+	</files>
+        <config>
+            <fields name="params">
+               <fieldset name="basic">                    
+                    <field name="token_rdsatation" type='text' label='PLG_SYSTEM_RD_STATION_TOKEN_LABEL'/>
+ <!--                    <field name='list_form' 
+                           type='repeatable' 
+                           icon='list' 
+                           description='PLG_SYSTEM_RD_STATION_LIST_FORMS_DESC'
+                           label='PLG_SYSTEM_RD_STATION_LIST_FORMS_LABEL'
+                    >
+                        <fields name='params'>
+                            <fieldset name='list_form_modal' hidden='true' repeat='true'>-->
+                                <field name='form'
+                                       type='list'
+                                       description='PLG_SYSTEM_RD_STATION_FORM_DESC' 
+                                       label='PLG_SYSTEM_RD_STATION_FORM_LABEL'
+                                       multiple='true'
+                                >
+                                    <option value="com_contact">PLG_SYSTEM_RD_STATION_FORM_JOOMLA_CONTACT_FORM</option>
+<!--                                    <option value="com_rsform">PLG_SYSTEM_RD_STATION_FORM_RS_FORM</option>-->
+                                    
+                                </field>
+<!--                                <field name='form_fields'
+                                           type='text'
+                                           label='PLG_SYSTEM_RD_STATION_FIELDS_NAME_FORM_LABEL'
+                                           description='PLG_SYSTEM_RD_STATION_FIELDS_NAME_FORM_DESC' 
+                                    />   
+                            </fieldset> 
+                            
+                        </fields>
+                        
+                    </field>-->
+                </fieldset>
+                <fieldset name="JoomlaIntegration" label='PLG_SYSTEM_RD_STATION_LEAD_JOOMLA_FORM_INTAGRATION'>
+                    <field name="contact_form_lead_name" type='text' description='PLG_SYSTEM_RD_STATION_CONTACT_FORM_LEAD_NAME_DESC' label='PLG_SYSTEM_RD_STATION_CONTACT_FORM_LEAD_NAME_LABEL'/>
+                </fieldset>  
+           </fields>
+           
+        </config>
+
+</extension>
+    
+
