@@ -12,7 +12,7 @@
    */
   function addLeadConversionToRdstationCrm( $rdstation_token, $identifier, $data_array ) {
     $api_url = "http://www.rdstation.com.br/api/1.2/conversions";
-
+    
     try {
       if (empty($data_array["token_rdstation"]) && !empty($rdstation_token)) { $data_array["token_rdstation"] = $rdstation_token; }
       if (empty($data_array["identificador"]) && !empty($identifier)) { $data_array["identificador"] = $identifier; }

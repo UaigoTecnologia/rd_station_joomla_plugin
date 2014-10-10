@@ -1,5 +1,5 @@
 <?php
-include __DIR__.'/rd_station_lib/rdstation-integracao.php';
+
 //include 'RDstationBase.php';
 //ini_set('display_erros', true);
 //error_reporting(E_ALL);
