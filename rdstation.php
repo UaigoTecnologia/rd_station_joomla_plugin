@@ -6,7 +6,7 @@ define('PLG_RDSTATION_BASE_DIR',__DIR__);
 /**
  * Description of classoverrider
  *
- * @author ubuntu
+ * @author Rodrigo Emygdio da Silva Simas Pereira
  */
 class PlgSystemRdstation extends JPlugin {
     function onAfterRoute(){
@@ -17,7 +17,6 @@ class PlgSystemRdstation extends JPlugin {
                  include __DIR__.'/lib/rd_station_lib/rdstation-integracao.php';
                 foreach($this->params->get('form') as $forms){
                     require __DIR__.'/lib/'.$forms.'.php';
-//                    echo '<pre>';var_dump($_REQUEST);
                     $class = ucfirst($forms);
                     call_user_func(array($class,'sendLeadForm'),
                                     $this->params->get('token_rdsatation'),  $this->params->get('contact_form_lead_name')
