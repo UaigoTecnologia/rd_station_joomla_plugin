@@ -16,12 +16,16 @@ class JFormFieldRsFormForms extends JFormField {
         parent::__construct($form);
         
     }
+    /**
+     * @todo Metodo com muitas responsabilidades, refatora-lo
+     * @return String retorna os controles de formulários com os forms do rsform e seus campos
+     */
     protected function getInput() {
-        (string) $html = "";        
+        $html = "";        
         (array) $fields = $this->getForms();
         (string) $titleFormsBox = JText::_($this->getAttribute('title_form_box'));
-
-        while (!empty(current($fields))) {
+        $current = current($fields);
+        while (!empty($current) ) {
             (int) $formId = (int) current($fields)["FormId"];
             (string) $legend = current($fields)["formName"];
             (string) $nameLeadTitle = JText::_('PLG_SYSTEM_RD_STATION_LEAD_RS_FORM_FORMS_NAME_LEAD');
@@ -46,6 +50,7 @@ class JFormFieldRsFormForms extends JFormField {
             $html .= "$selectHtmlNameLead</br>$selectHtmlEmailLead</fieldset>";
 
             $formId = current($fields)["FormId"];
+            $current = current($fields);
         }
 
         return $html;
